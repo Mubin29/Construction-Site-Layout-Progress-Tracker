@@ -34,7 +34,6 @@ The user can:
 | **Styling** | Tailwind CSS + ShadCN UI components |
 | **Animations** | Framer Motion |
 | **Icons & UI Helpers** | Lucide React |
-| **State Management** | React Hooks (useState, useMemo) |
 
 ---
 
