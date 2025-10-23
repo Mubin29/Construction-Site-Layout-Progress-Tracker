@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Site Layout Progress Tracker</title>
+    <meta name="description" content="Track waterproofing progress across floors, flats, and areas in construction projects">
+    <meta name="keywords" content="construction, progress tracking, waterproofing, project management">
+    
+    <meta property="og:title" content="Construction Site Layout Progress Tracker">
+    <meta property="og:description" content="Track waterproofing progress across floors, flats, and areas in construction projects">
+    
+    <meta name="twitter:title" content="Construction Site Layout Progress Tracker">
+    <meta name="twitter:description" content="Track waterproofing progress across floors, flats, and areas in construction projects">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #ffffff;
+            --success-color: #22c55e;
+            --border-color: #e5e7eb;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+            --bg-hover: #f9fafb;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            color: var(--text-primary);
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply px-6 py-2.5 rounded-lg font-medium transition-all duration-200;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+        
+        .btn-primary:hover {
+            @apply opacity-90;
+        }
+        
+        .btn-success {
+            @apply px-6 py-2.5 rounded-lg font-medium transition-all duration-200;
+            background-color: var(--success-color);
+            color: white;
+        }
+        
+        .btn-success:hover {
+            @apply opacity-90;
+        }
+        
+        .btn-secondary {
+            @apply px-6 py-2.5 rounded-lg font-medium transition-all duration-200 bg-gray-200 text-gray-700;
+        }
+        
+        .btn-secondary:hover {
+            @apply bg-gray-300;
+        }
+        
+        .card {
+            @apply bg-white rounded-xl border border-[var(--border-color)] shadow-sm;
+        }
+        
+        .accordion-item {
+            @apply border-b border-[var(--border-color)] transition-all duration-200;
+        }
+        
+        .accordion-item:hover {
+            background-color: var(--bg-hover);
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="utils/mockData.js"></script>
+    <script type="text/babel" src="components/ProgressBadge.jsx"></script>
+    <script type="text/babel" src="components/StatusBadge.jsx"></script>
+    <script type="text/babel" src="components/LineItem.jsx"></script>
+    <script type="text/babel" src="components/AreaUnit.jsx"></script>
+    <script type="text/babel" src="components/Flat.jsx"></script>
+    <script type="text/babel" src="components/Floor.jsx"></script>
+    <script type="text/babel" src="components/FilterDropdown.jsx"></script>
+    <script type="text/babel" src="components/ActionButtons.jsx"></script>
+    <script type="text/babel" src="components/Toast.jsx"></script>
+    <script type="text/babel" src="app.js"></script>
+
+    <footer class="text-center py-4 text-gray-600 text-sm">
+        © 2025 Copyright by Mubin. All rights reserved.
+    </footer>
+
+</body>
+</html>
